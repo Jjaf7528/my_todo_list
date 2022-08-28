@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <nav class="navbar bg-light pb-3">
+    <nav class="navbar bg-light pt-3 pb-3">
         <div class="container-fluid">
             <a href="{{ route('welcome') }}" class="navbar-brand">My ToDo List</a>  
             @if (session('success')) 
@@ -18,10 +18,7 @@
                     <a class="alert alert-success" style="text-decoration:none;"> {{session('success')}} </a>  
                 </div> 
             @endif
-            <form class="d-flex pt-3"  action="{{ route('register') }}" method="GET">      
-                @csrf                    
-                <button class="btn btn-primary">Registrarse</button>
-            </form> 
+            <a type="button" href="{{route('register')}}" class="btn btn-primary">Registrarse</a>                       
         </div>
     </nav>    
     

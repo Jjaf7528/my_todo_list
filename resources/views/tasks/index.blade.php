@@ -63,13 +63,9 @@
                 <td scope="row">
                     <button class="btn {{$task->status ? 'btn-success' : 'btn-warning'}}">{{$task->status ? 'Completada' : 'Pendiente'}}</button>
                 </td>
-                <td class="d-flex">                    
-                    <a type="button" href="{{route('tasks.edit', $task->id)}}" class="btn btn-primary">Editar</a>                         
-                    <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
-                        @method('DELETE')
-                        @csrf                    
-                        <button class="btn btn-danger">Eliminar</button>
-                    </form>
+                <td>                    
+                    <a type="button" href="{{route('tasks.edit', $task->id)}}" class="btn btn-primary">Editar</a>         
+                    <a type="button" href="{{route('tasks.show', $task->id)}}" class="btn btn-danger">Eliminar</a>                        
                 </td>
             </tr> 
                 @endforeach

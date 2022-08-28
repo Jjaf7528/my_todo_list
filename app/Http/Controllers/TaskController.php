@@ -39,7 +39,7 @@ class TaskController extends Controller
         return redirect()->route('tasks.index')->with('success','Tarea ACTUALIZADA satisfactoriamente');
     }
    
-    public function destroy(Task $task)
+    public function show(Task $task)
     {        
         $task->delete();
 
